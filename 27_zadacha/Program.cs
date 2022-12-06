@@ -5,10 +5,11 @@
 //9012 -> 12
 Console.Clear();
 Console.Write("Введите число: ");
-string number = Console.ReadLine();
+int number = int.Parse(Console.ReadLine());
 int sum = 0;
-int size = number.Length;
-
-for (int i = 0; i < size; i++) sum += number[i];
-
+while (number > 0)
+{
+    sum += number % 10;
+    number = number / 10;
+}
 Console.WriteLine(sum);
